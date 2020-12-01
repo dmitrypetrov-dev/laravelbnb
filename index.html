@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>LaravelBnb</title>
+</head>
+<body>
+<div class="wrapper">
+    <nav class="bg-white border-b border-gray-200 mb-7">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center"><img
+                            src="img/workflow-mark-on-white.svg" alt="Workflow logo"
+                            class="block lg:hidden h-8 w-auto"> <img
+                            src="img/workflow-logo-on-white.svg" alt="Workflow logo"
+                            class="hidden lg:block h-8 w-auto"></div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <button aria-label="Notifications"
+                            class="p-1 border-2 border-transparent text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:text-gray-500 focus:bg-gray-100 transition duration-150 ease-in-out">
+                        <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                        </svg>
+                    </button>
+                    <div class="ml-3 relative">
+                        <div>
+                            <button id="user-menu" aria-label="User menu" aria-haspopup="true"
+                                    class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
+                                <img src="img/photo-1472099645785-5658abf4ff4e" alt=""
+                                     class="h-8 w-8 rounded-full"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
+                        <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" class="block h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" class="hidden h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden sm:hidden">
+            <div class="pt-2 pb-3 space-y-1"><a href="http://laravelbnb.test/#"
+                                                class="block pl-3 pr-4 py-2 border-l-4 border-indigo-500 text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out">
+                Dashboard
+            </a> <a href="http://laravelbnb.test/#"
+                    class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
+                Team
+            </a> <a href="http://laravelbnb.test/#"
+                    class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
+                Projects
+            </a> <a href="http://laravelbnb.test/#"
+                    class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
+                Calendar
+            </a></div>
+            <div class="pt-4 pb-3 border-t border-gray-200">
+                <div class="flex items-center px-4 space-x-3">
+                    <div class="flex-shrink-0"><img src="img/photo-1472099645785-5658abf4ff4e" alt=""
+                                                    class="h-10 w-10 rounded-full"></div>
+                    <div>
+                        <div class="text-base font-medium leading-6 text-gray-800">Tom Cook</div>
+                        <div class="text-sm font-medium leading-5 text-gray-500">tom@example.com</div>
+                    </div>
+                </div>
+                <div role="menu" aria-orientation="vertical" aria-labelledby="user-menu" class="mt-3 space-y-1"><a
+                        href="http://laravelbnb.test/#" role="menuitem"
+                        class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out">
+                    Your Profile
+                </a> <a href="http://laravelbnb.test/#" role="menuitem"
+                        class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out">
+                    Settings
+                </a> <a href="http://laravelbnb.test/#" role="menuitem"
+                        class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out">
+                    Sign out
+                </a></div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="main">
+            <div class="grid mb-7">
+                <div><img src="img/photo-1.jpeg" alt=""></div>
+                <div><img src="img/photo-2.jpeg" alt=""></div>
+                <div class="relative">
+                    <img src="img/photo-3.jpeg" alt="">
+                    <button type="button" style="font-weight: bold; background: url(img/photo-icon.svg) 11px 8px no-repeat; background-size: 20px; background-color: white"
+                            class="absolute right-5 bottom-5 inline-flex items-center justify-center pl-5 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-black hover:bg-gray-50 focus:outline-none w-20">
+                        1/18
+                    </button>
+                </div>
+            </div>
+            <div class="grid-2 w-full mb-64">
+                <div class="w-full">
+                    <div class="mb-8" style="width: 41rem;">
+                        <div class="p-4 border rounded shadow-sm">
+                            <div class="pb-5" style="border-bottom: 1px solid lightgray"><h1
+                                    class="text-3xl font-semibold">East Wayneburgh Luxury Rooms</h1></div>
+                            <div class="pt-5"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut
+                                cupiditate
+                                dolorum
+                                esse
+                                et fugit hic iure molestiae nulla quaerat. A atque corporis dignissimos eius fuga
+                                laudantium
+                                obcaecati officia, quos!</p></div>
+                        </div>
+                    </div>
+                    <div class="pl-4 pr-8">
+                        <div class="uppercase mb-7 font-semibold" style="color: gray">review list</div>
+                        <div>
+                            <div class="mb-8 pb-8" style="border-bottom: 1px solid lightgray">
+                                <div class="flex justify-between">
+                                    <div>Piotr Jura</div>
+                                    <div class="flex">
+                                        <div class="w-6">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24"
+                                                 stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                      d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="w-6">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24"
+                                                 stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                      d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="w-6">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24"
+                                                 stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                      d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="w-6">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24"
+                                                 stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                      d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="w-6">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                 stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                      d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-7 text-sm">a day ago</div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, cum cupiditate ea
+                                    explicabo fugit inventore ipsa iure laudantium natus nesciunt nihil, quod saepe
+                                    sapiente sequi veritatis, voluptates voluptatum? Eaque, possimus!</p>
+                            </div>
+                            <div>
+                                <div class="flex justify-between">
+                                    <div>Piotr Jura</div>
+                                    <div class="flex">
+                                        <div class="w-6">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24"
+                                                 stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                      d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="w-6">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24"
+                                                 stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                      d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="w-6">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24"
+                                                 stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                      d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="w-6">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24"
+                                                 stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                      d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="w-6">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24"
+                                                 stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                      d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-7 text-sm">a day ago</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pl-3">
+                    <div class="uppercase mb-2 font-semibold" style="color: gray">check availability</div>
+                    <form action="#" method="get">
+                        <div class="flex justify-between mb-4">
+                            <div>
+                                <label class="uppercase font-semibold text-xs" style="color: gray"
+                                       for="date-from">from</label>
+                                <input class="border rounded w-11/12 pl-2 pt-1 pb-1" id="date-from" type="date"
+                                       name="date-from">
+                            </div>
+                            <div>
+                                <label class="uppercase font-semibold text-xs" style="color: gray"
+                                       for="date-to">to</label>
+                                <input class="border rounded w-11/12 pl-2 pt-1 pb-1" id="date-to" type="date"
+                                       name="date-to">
+                            </div>
+                        </div>
+                        <button type="submit"
+                                class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gray-500 hover:bg-gray-600 focus:outline-none w-full">
+                            Check!
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>
