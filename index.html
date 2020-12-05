@@ -4,8 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        html {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        *, *::before, *::after {
+            -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+        }
+
+        p, h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .wrapper {
+            max-width: 1920px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        a.absolute:hover {
+            background-color: #f7f7f7 !important;
+        }
+    </style>
     <title>LaravelBnb</title>
 </head>
 <body>
@@ -89,21 +118,25 @@
         </div>
     </nav>
     <main>
-        <div class="main">
-            <div class="grid mb-7">
-                <div><img src="img/photo-1.jpeg" alt=""></div>
-                <div><img src="img/photo-2.jpeg" alt=""></div>
-                <div class="relative">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="grid grid-cols-3 grid-rows-2 gap-2 mb-7 w-full">
+                <div class="col-start-1 col-end-3 row-start-1 row-end-3 rounded overflow-hidden cursor-pointer">
+                    <img src="img/photo-1.jpeg" alt="">
+                </div>
+                <div class="rounded overflow-hidden cursor-pointer">
+                    <img src="img/photo-2.jpeg" alt="">
+                </div>
+                <div class="relative rounded overflow-hidden cursor-pointer">
                     <img src="img/photo-3.jpeg" alt="">
-                    <button type="button" style="font-weight: bold; background: url(img/photo-icon.svg) 11px 8px no-repeat; background-size: 20px; background-color: white"
-                            class="absolute right-5 bottom-5 inline-flex items-center justify-center pl-5 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-black hover:bg-gray-50 focus:outline-none w-20">
-                        1/18
-                    </button>
+                    <a href="slider.html" style="background: url(img/dots.svg) 16px center no-repeat; background-size: 13px; background-color: #fff; border-color: #222"
+                            class="absolute right-5 bottom-5 inline-flex items-center justify-center pl-5 py-2 border border-solid text-sm font-semibold rounded-lg shadow-sm text-black focus:outline-none w-40 h-9">
+                        Show all photos
+                    </a>
                 </div>
             </div>
-            <div class="grid-2 w-full mb-64">
-                <div class="w-full">
-                    <div class="mb-8" style="width: 41rem;">
+            <div class="grid grid-cols-3 gap-2 w-full mb-64">
+                <div class="col-start-1 col-end-3 w-full">
+                    <div class="mb-8">
                         <div class="p-4 border rounded shadow-sm">
                             <div class="pb-5" style="border-bottom: 1px solid lightgray"><h1
                                     class="text-3xl font-semibold">East Wayneburgh Luxury Rooms</h1></div>
@@ -117,7 +150,7 @@
                         </div>
                     </div>
                     <div class="pl-4 pr-8">
-                        <div class="uppercase mb-7 font-semibold" style="color: gray">review list</div>
+                        <div class="mb-7 font-semibold" style="color: gray">Review list</div>
                         <div>
                             <div class="mb-8 pb-8" style="border-bottom: 1px solid lightgray">
                                 <div class="flex justify-between">
@@ -212,19 +245,19 @@
                     </div>
                 </div>
                 <div class="pl-3">
-                    <div class="uppercase mb-2 font-semibold" style="color: gray">check availability</div>
+                    <div class="mb-3 font-semibold" style="color: gray">Check availability</div>
                     <form action="#" method="get">
-                        <div class="flex justify-between mb-4">
-                            <div>
-                                <label class="uppercase font-semibold text-xs" style="color: gray"
+                        <div class="flex mb-4">
+                            <div class="flex flex-col w-6/12 pr-1.5">
+                                <label class="uppercase font-semibold text-xs mb-2" style="color: gray"
                                        for="date-from">from</label>
-                                <input class="border rounded w-11/12 pl-2 pt-1 pb-1" id="date-from" type="date"
+                                <input class="border rounded pl-2 pt-1 pb-1" id="date-from" type="date"
                                        name="date-from">
                             </div>
-                            <div>
-                                <label class="uppercase font-semibold text-xs" style="color: gray"
+                            <div class="flex flex-col w-6/12 pl-1.5">
+                                <label class="uppercase font-semibold text-xs mb-2" style="color: gray"
                                        for="date-to">to</label>
-                                <input class="border rounded w-11/12 pl-2 pt-1 pb-1" id="date-to" type="date"
+                                <input class="border rounded pl-2 pt-1 pb-1" id="date-to" type="date"
                                        name="date-to">
                             </div>
                         </div>
