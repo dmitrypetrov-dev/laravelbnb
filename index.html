@@ -22,7 +22,8 @@
 
         img {
             max-width: 100%;
-            height: auto;
+            width: 100%;
+            height: 100%;
         }
 
         .wrapper {
@@ -52,9 +53,8 @@
                 <div class="hidden sm:ml-6 sm:flex sm:items-center">
                     <button aria-label="Notifications"
                             class="p-1 border-2 border-transparent text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:text-gray-500 focus:bg-gray-100 transition duration-150 ease-in-out">
-                        <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" class="h-6 w-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                         </svg>
                     </button>
                     <div class="ml-3 relative">
@@ -118,23 +118,23 @@
         </div>
     </nav>
     <main>
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="grid grid-cols-3 grid-rows-2 gap-2 mb-7 w-full">
-                <div class="col-start-1 col-end-3 row-start-1 row-end-3 rounded overflow-hidden cursor-pointer">
-                    <img src="img/photo-1.jpeg" alt="">
+        <div class="max-w-7xl mx-auto px-3.5 sm:px-4 lg:px-6">
+            <div class="grid grid-cols-3 grid-rows-2 gap-2 mb-7 w-full relative" style="max-height: 500px">
+                <div class="col-start-1 col-end-4 sm:col-end-3 row-start-1 row-end-3 rounded overflow-hidden cursor-pointer">
+                    <img class="object-cover" src="img/photo-1.jpeg" alt="">
                 </div>
-                <div class="rounded overflow-hidden cursor-pointer">
-                    <img src="img/photo-2.jpeg" alt="">
+                <div class="hidden sm:block sm:rounded sm:overflow-hidden sm:cursor-pointer">
+                    <img class="object-cover" src="img/photo-2.jpeg" alt="">
                 </div>
-                <div class="relative rounded overflow-hidden cursor-pointer">
-                    <img src="img/photo-3.jpeg" alt="">
-                    <a href="slider.html" style="background: url(img/dots.svg) 16px center no-repeat; background-size: 13px; background-color: #fff; border-color: #222"
-                            class="absolute right-5 bottom-5 inline-flex items-center justify-center pl-5 py-2 border border-solid text-sm font-semibold rounded-lg shadow-sm text-black focus:outline-none w-40 h-9">
-                        Show all photos
-                    </a>
+                <div class="hidden sm:block sm:rounded sm:overflow-hidden sm:cursor-pointer">
+                    <img class="object-cover" src="img/photo-3.jpeg" alt="">
                 </div>
+                <a href="slider.html" style="background: url(img/dots.svg) 16px center no-repeat; background-size: 13px; background-color: #fff; border-color: #222"
+                   class="absolute right-5 bottom-5 inline-flex items-center justify-center pl-5 py-2 border border-solid text-sm font-semibold rounded-lg shadow-sm text-black focus:outline-none w-40 h-9">
+                    Show all photos
+                </a>
             </div>
-            <div class="grid grid-cols-3 gap-2 w-full mb-64">
+            <div class="sm:grid sm:grid-cols-3 sm:gap-2 sm:w-full sm:mb-64 mb-10 flex flex-col">
                 <div class="col-start-1 col-end-3 w-full">
                     <div class="mb-8">
                         <div class="p-4 border rounded shadow-sm">
@@ -149,7 +149,7 @@
                                 obcaecati officia, quos!</p></div>
                         </div>
                     </div>
-                    <div class="pl-4 pr-8">
+                    <div class="pl-4 pr-4 sm:pr-8">
                         <div class="mb-7 font-semibold" style="color: gray">Review list</div>
                         <div>
                             <div class="mb-8 pb-8" style="border-bottom: 1px solid lightgray">
@@ -244,7 +244,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="pl-3">
+                <div class="sm:pl-3 sm:order-none order-first mb-7 sm:mb-0">
                     <div class="mb-3 font-semibold" style="color: gray">Check availability</div>
                     <form action="#" method="get">
                         <div class="flex mb-4">
